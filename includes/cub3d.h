@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:42 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 15:55:29 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 16:09:33 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
 
-# include "../utils/minilibx-linux/mlx.h"
-# include "../utils/libft/libft.h"
+# include "MLX42.h"
 # include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
