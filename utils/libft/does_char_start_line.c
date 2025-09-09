@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   does_char_start_line.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/06/13 21:44:26 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/06/16 11:31:33 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+int	does_char_start_line(char *line, char c)
 {
-	char	**map;
+	char	*ptr;
+	int		i;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	i = 0;
+	ptr = ft_strchr(line, c);
+	if (ptr == NULL)
+		return (FALSE);
+	while (&(line[i]) != ptr)
+	{
+		if (ft_iswhitespace(line[i]) != TRUE && line[i] != 0)
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
 }

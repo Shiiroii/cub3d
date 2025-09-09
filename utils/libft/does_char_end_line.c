@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   does_pipe_end_line.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/06/13 21:44:26 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/06/16 11:24:26 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+int	does_char_end_line(char *line, char c)
 {
-	char	**map;
+	char	*ptr;
+	int		i;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	i = 1;
+	ptr = ft_strrchr(line, c);
+	if (ptr == NULL)
+		return (FALSE);
+	while (ptr[i] != 0)
+	{
+		if (ft_iswhitespace(ptr[i]) != TRUE && ptr[i] != 0)
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
 }

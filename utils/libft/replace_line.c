@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   replace_line.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/06/16 12:28:25 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/06/18 10:29:35 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+char	**replace_line(char **tab, char *line, int i)
 {
-	char	**map;
-
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	free(tab[i]);
+	tab[i] = line;
+	return (tab);
 }

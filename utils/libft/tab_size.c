@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   tab_size.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/05/22 20:14:36 by jlaineb           #+#    #+#             */
+/*   Updated: 2025/06/06 14:11:28 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+int	tab_size(char **tab)
 {
-	char	**map;
+	int	len;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	len = 0;
+	if (tab == NULL)
+		return (len);
+	while (tab[len] != NULL)
+		len++;
+	return (len);
 }

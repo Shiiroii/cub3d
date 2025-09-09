@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   find_segment.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/05/23 08:23:54 by jlaineb           #+#    #+#             */
+/*   Updated: 2025/06/18 10:41:34 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+// find the segment delimited by the two first occurence of char c in str,
+// and returns their pointers
+t_segment	find_segment(char *str, char c)
 {
-	char	**map;
+	t_segment	s;
+	int			i;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	i = 0;
+	while (str[i] != 0 && str[i] != c)
+		i++;
+	if (str[i] == 0)
+	{
+		s.start = 0;
+		s.end = 0;
+		return (s);
+	}
+	s.start = i++ - 1;
+	while (str[i] != 0 && str[i] != c)
+		i++;
+	s.end = i + 1;
+	return (s);
 }

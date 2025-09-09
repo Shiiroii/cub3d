@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_x_char_in_str.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/06/10 12:04:30 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/06/10 12:20:33 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+int	is_x_char_in_str(char *str, char c, int x)
 {
-	char	**map;
+	int	i;
+	int	j;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	if (ft_strlen(str) < (size_t) x)
+		return (FALSE);
+	i = x - 1;
+	while (str[i] != 0)
+	{
+		j = 0;
+		while (j != x)
+		{
+			if (str[i - j] != c)
+			{
+				i++;
+				j = x;
+			}
+			else
+			{
+				j++;
+				if (j == x)
+					return (TRUE);
+			}
+		}
+	}
+	return (FALSE);
 }

@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   cut_tab_tail.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/06/09 22:26:55 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/06/09 22:26:56 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+// cut tab tail, line n included. Returns tab head
+char	**cut_tab_tail(char **tab, int n)
 {
-	char	**map;
+	int		i;
+	int		size;
+	char	**new_tab;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	size = tab_size(tab);
+	if (n > size)
+		return (NULL);
+	i = 0;
+	new_tab = malloc(sizeof(char *) * n);
+	while (i < (n - 1))
+	{
+		new_tab[i] = ft_strdup(tab[i]);
+		i++;
+	}
+	new_tab[i] = NULL;
+	return (new_tab);
 }

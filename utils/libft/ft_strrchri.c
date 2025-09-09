@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/09 16:18:25 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/09/09 16:26:32 by jlaine-b         ###   ########.fr       */
+/*   Created: 2024/10/16 13:20:51 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/06/18 10:26:42 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_strrchri(const char *s, int c)
 {
-	char	**map;
+	int		i;
+	int		n;
+	char	*s1;
 
-	map = malloc(sizeof(6));
-	map[0] = ft_strdup("1111111111");
-	map[1] = ft_strdup("1000000001");
-	map[2] = ft_strdup("1000111111");
-	map[3] = ft_strdup("1000000001");
-	map[4] = ft_strdup("1111111111");
-	map[5] = NULL;
+	if (s == NULL)
+		return (-1);
+	s1 = (char *)s;
+	i = 0;
+	n = -1;
+	while (s1[i] != '\0')
+	{
+		if (s1[i] == (char) c)
+		{
+			n = i;
+		}
+		i++;
+	}
+	if ((char) c == '\0')
+		n = i;
+	return (n);
 }
