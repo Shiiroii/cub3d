@@ -6,8 +6,15 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:56:22 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 16:00:01 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 16:06:35 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/cub3d.h"
+
+int	are_borders_valid(char **map)
+{
+	int	i;
+
+	i = 0;
+}
