@@ -6,8 +6,19 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:27 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 15:23:19 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 15:44:54 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub3d.h"
+
+int	main(int argc, char **argv)
+{
+	t_game	*game;
+
+	if (argc == 2)
+	{
+		initialize_structs();
+		
+	}
+}
