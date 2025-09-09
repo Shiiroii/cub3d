@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:27 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 15:44:54 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 16:07:06 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(int argc, char **argv)
 
 	if (argc == 2)
 	{
-		initialize_structs();
-		
+		initialize_map();
+
 	}
 }
