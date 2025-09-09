@@ -1,5 +1,7 @@
 PARSING
 
+verifier que le fichier se termine par ".cub"
+
 get_next_line
 
 mettre les 4 chemins dans t_data (allouees)
