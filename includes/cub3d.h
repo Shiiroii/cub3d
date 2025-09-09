@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:42 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 15:47:20 by jlaine-b         ###   ########.fr       */
+/*   Updated: 2025/09/09 15:55:29 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@
 
 // ====== STRUCTURES ====== //
 
-typedef struct s_data
+typedef struct	s_data
 {
 	char	*north;
 	char	*south;
-	char	*eat;
+	char	*east;
 	char	*west;
 	int		*floor;
 	int		*ceiling;
@@ -43,5 +43,10 @@ typedef struct s_data
 	int		len;
 	int		large;
 }				t_data;
+
+typedef struct	s_game
+{
+
+}				t_game;
 
 #endif
