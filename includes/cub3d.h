@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:42 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 16:24:57 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 16:48:08 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 # include <sys/time.h>
+# include <stdlib.h>
+# include "libft.h"
 
 // ============================ ASSETS ===============================
 
@@ -27,6 +29,9 @@
 # define WEST 'W'
 # define FLOOR '0'
 # define WALL '1'
+
+# define WINDOWX 3000
+# define WINDOWY 1700
 
 // ====== STRUCTURES ====== //
 
