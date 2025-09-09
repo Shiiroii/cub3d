@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:42 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 15:29:39 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 15:47:20 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,20 @@
 # define WEST 'W'
 # define FLOOR '0'
 # define WALL '1'
+
+// ====== STRUCTURES ====== //
+
+typedef struct s_data
+{
+	char	*north;
+	char	*south;
+	char	*eat;
+	char	*west;
+	int		*floor;
+	int		*ceiling;
+	char	**map;
+	int		len;
+	int		large;
+}				t_data;
 
 #endif

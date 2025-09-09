@@ -1,0 +1,11 @@
+PARSING
+
+get_next_line
+
+mettre les 4 chemins dans t_data (allouees)
+-> verifier que les chemins sont bons et correspondent a une vraie texture
+
+mettre les couleurs du sol et du plafond dans map (tableau de int alloue de taille 3)
+-> verifier que les nombres sont bien situes entre 255 et 0
+
+c
