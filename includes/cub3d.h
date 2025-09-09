@@ -6,7 +6,7 @@
 /*   By: liulm <liulm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/09 15:21:42 by liulm             #+#    #+#             */
-/*   Updated: 2025/09/09 15:55:29 by liulm            ###   ########.fr       */
+/*   Updated: 2025/09/09 16:22:58 by liulm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ typedef struct	s_data
 
 typedef struct	s_game
 {
-
+	void		*mlxptr;
 }				t_game;
 
 #endif
