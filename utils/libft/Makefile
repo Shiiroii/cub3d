@@ -1,4 +1,5 @@
 SRCS = ft_isascii.c\
+ft_isnum.c\
 ft_memmove.c\
 ft_memcmp.c\
 ft_split.c\
@@ -45,7 +46,7 @@ ft_strcmp.c\
 ft_filetostr.c\
 free_tab.c\
 ft_insert_last_line.c\
-ft_print_tab_char.c\
+print_tab.c\
 ft_strjoinfree.c\
 ft_charinstr.c\
 ft_parsing_printf.c\
@@ -74,6 +75,10 @@ does_char_end_line.c\
 replace_line.c\
 ft_strchri.c\
 ft_strrchri.c\
+add_line_in_tab.c\
+close_quote.c\
+ft_bool.c\
+ft_strtrimfree.c\
 
 OBJS = $(SRCS:.c=.o)
 

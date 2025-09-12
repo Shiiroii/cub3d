@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charinstr.c                                     :+:      :+:    :+:   */
+/*   trim_tab_free.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaine-b <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 15:13:54 by jlaine-b          #+#    #+#             */
-/*   Updated: 2024/11/30 15:14:04 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/08/05 15:50:21 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/08/05 15:53:55 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_charinstr(char *s, char c)
-{
-	int		i;
+#include "libft.h"
 
-	if (s == NULL)
-		return (0);
-	if (c == '\0')
-		return (1);
+char	**trim_tab_free(char **tab, char *set)
+{
+	int	i;
+
 	i = 0;
-	while (s[i] != '\0')
+	while (tab[i] != NULL)
 	{
-		if (s[i] == c)
-			return (1);
+		tab[i] = ft_strtrimfree(tab[i], set);
 		i++;
 	}
-	return (0);
+	return (tab);
 }

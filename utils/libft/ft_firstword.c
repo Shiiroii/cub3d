@@ -30,6 +30,6 @@ char	*ft_firstword(char *str, char c)
 	word = malloc(sizeof(char) * (i - j + 1));
 	while (j != i)
 		word[k++] = str[j++];
-	word[j] = '\0';
+	word[k] = '\0';
 	return (word);
 }

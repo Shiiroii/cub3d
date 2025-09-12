@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tab_char.c                                :+:      :+:    :+:   */
+/*   ft_ischarinset.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaineb <jlaineb@student.42.fr>            +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 11:32:07 by jlaine-b          #+#    #+#             */
-/*   Updated: 2025/01/16 23:51:45 by jlaineb          ###   ########.fr       */
+/*   Created: 2025/07/19 20:53:13 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/07/19 20:53:30 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_tab_char(char **text)
+int	ft_ischarinset(char c, char const *set)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (text[i] != NULL)
-		ft_printf("%s\n", text[i++]);
+	if (set == NULL)
+		return (0);
+	while (set[i] != '\0')
+	{
+		if (c == set[i])
+			return (1);
+		i++;
+	}
+	return (0);
 }

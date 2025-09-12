@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charinstr.c                                     :+:      :+:    :+:   */
+/*   close_quote.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaine-b <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 15:13:54 by jlaine-b          #+#    #+#             */
-/*   Updated: 2024/11/30 15:14:04 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/08/05 13:41:41 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/09/12 10:33:00 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_charinstr(char *s, char c)
-{
-	int		i;
+#include "libft.h"
 
-	if (s == NULL)
-		return (0);
-	if (c == '\0')
-		return (1);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return (1);
+int	close_quote(char *str, int i, char c)
+{
+	i++;
+	while (str[i] && str[i] != c)
 		i++;
-	}
-	return (0);
+	if (str[i - 1] == 0)
+		return (-1);
+	return (i);
 }

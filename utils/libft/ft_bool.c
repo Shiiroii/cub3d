@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charinstr.c                                     :+:      :+:    :+:   */
+/*   ft_bool.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaine-b <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 15:13:54 by jlaine-b          #+#    #+#             */
-/*   Updated: 2024/11/30 15:14:04 by jlaine-b         ###   ########.fr       */
+/*   Created: 2025/08/20 16:47:23 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/08/20 16:48:27 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_charinstr(char *s, char c)
-{
-	int		i;
+#include "libft.h"
 
-	if (s == NULL)
-		return (0);
-	if (c == '\0')
-		return (1);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
+int	ft_bool(int bool)
+{
+	if (bool == 0)
+		bool = 1;
+	else
+		bool = 0;
+	return (bool);
 }

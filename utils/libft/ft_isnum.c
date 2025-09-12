@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charinstr.c                                     :+:      :+:    :+:   */
+/*   ft_isnum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jlaine-b <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jlaine-b <jlaine-b@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/30 15:13:54 by jlaine-b          #+#    #+#             */
-/*   Updated: 2024/11/30 15:14:04 by jlaine-b         ###   ########.fr       */
+/*   Created: 2024/10/14 17:11:19 by jlaine-b          #+#    #+#             */
+/*   Updated: 2025/08/19 18:55:54 by jlaine-b         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_charinstr(char *s, char c)
-{
-	int		i;
+#include "libft.h"
 
-	if (s == NULL)
-		return (0);
-	if (c == '\0')
+int	ft_isnum(int c)
+{
+	if (48 <= c && c <= 57)
 		return (1);
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c)
-			return (1);
-		i++;
-	}
 	return (0);
 }
